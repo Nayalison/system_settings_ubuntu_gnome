@@ -22,7 +22,7 @@ essentciais() {
 # instalarGit
 # instalarCurl
 # instalarZsh
-instalarVim
+# instalarVim
 }
 
 desktop() {
@@ -40,3 +40,5 @@ develop() {
 }
 
 essentciais
+desktop
+develop
