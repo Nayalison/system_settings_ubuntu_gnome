@@ -17,6 +17,9 @@
 . scripts/instalarNodejs.sh
 . scripts/mensPadrao.sh
 
+# Manutenção do SO
+. scripts/instalarGrubCustomizer
+
 essentciais() {
   echo "Intalando aplicativos essenciais"
 # instalarGit
@@ -39,6 +42,12 @@ develop() {
 # instalarNodejs
 }
 
+manutencao() {
+  echo "Intalando aplicativos de manutenção"
+  # instalarGrubCustomizer
+}
+
 essentciais
 desktop
 develop
+manutencao
