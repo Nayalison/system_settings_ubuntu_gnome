@@ -1,4 +1,4 @@
 PrepareMySystem_UbuntuGnomeVersion
 ==================================
 
-Aplicação feita em ShellScript para agilizar o processo de preparação pós instalação do Ubuntu Gnome 3
+Aplicação construída em ShellScript que instala várias aplicações que fazem parte do meu dia a dia. Ela está customizada para o Ubuntu Gnome.
