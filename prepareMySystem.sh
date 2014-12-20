@@ -5,6 +5,7 @@
 . scripts/instalarCurl.sh
 . scripts/instalarZsh.sh
 . scripts/instalarVim.sh
+. scripts/instalarTerminator.sh
 
 # Desktop
 . scripts/instalarIcones.sh
@@ -28,6 +29,7 @@ essentciais() {
   # instalarCurl
   # instalarZsh
   # instalarVim
+  # instalarTerminator
 }
 
 desktop() {
