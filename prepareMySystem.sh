@@ -13,6 +13,7 @@
 
 # Develop
 . scripts/instalarJava7.sh
+. scripts/instalarJava8.sh
 . scripts/instalarEclipse64.sh
 . scripts/instalarEclipse32.sh
 . scripts/instalarSublimeText3.sh
@@ -43,6 +44,7 @@ develop() {
   echo "Intalando aplicativos de desenvolvimento"
   # instalarSublimeText3
   # instalarJava7
+  # instalarJava8
   # instalarEclipse64
   # instalarEclipse32
   # instalarNodejs

@@ -6,12 +6,12 @@
 instalarEclipse64() {
 
 	APP="Eclipse"
-  PACOTE=eclipse-jee-luna-SR1-linux-gtk-x86_64.tar.gz
+  PACOTE=eclipse-jee-luna-SR1a-linux-gtk-x86_64.tar.gz
   DIRETORIO=~/Desenvolvimento
 	echo "Instalando $APP"
 
   if [ ! -e /tmp/$PACOTE ]; then
-    wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/luna/SR1/$PACOTE -P /tmp
+    wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/luna/SR1a/$PACOTE -P /tmp
   fi
 
   if [ ! -d $DIRETORIO ]; then
