@@ -5,7 +5,7 @@ instalarGit() {
   APP="Git"
   echo "Instalando $APP"
 
-  sudo apt-get install git git-gui gitk
+  sudo apt-get install git git-gui gitk -y
 
   STATUS=$?
 
@@ -18,7 +18,7 @@ instalarCurl() {
   APP="Curl"
   echo "Instalando $APP"
 
-  sudo apt-get install curl
+  sudo apt-get install curl -y
 
   STATUS=$?
 
@@ -47,7 +47,7 @@ instalarVim() {
   APP="Vim"
   echo "Instalando $APP"
 
-  sudo apt-get install vim
+  sudo apt-get install vim -y
 
   STATUS=$?
 
@@ -58,7 +58,7 @@ instalarVim() {
 instalarFontes() {
   APP="Fonte Arial"
   echo "Instalando $APP"
-  sudo apt-get install ttf-mscorefonts-installer
+  sudo apt-get install ttf-mscorefonts-installer -y
   STATUS=$?
 
   exibirMensagemDeStatus $STATUS $APP
@@ -68,7 +68,7 @@ instalarFontes() {
 instalarXvfb() {
   APP="xvfb"
   echo "Instalando $APP"
-  sudo apt-get install xvfb
+  sudo apt-get install xvfb -y
   STATUS=$?
 
   exibirMensagemDeStatus $STATUS $APP

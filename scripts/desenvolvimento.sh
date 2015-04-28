@@ -7,7 +7,7 @@ instalarJava7() {
 
   sudo add-apt-repository ppa:webupd8team/java
   sudo apt-get update
-  sudo apt-get install oracle-java7-installer
+  sudo apt-get install oracle-java7-installer -y
 
   STATUS=$?
 
@@ -22,7 +22,7 @@ instalarJava8() {
 
   sudo add-apt-repository ppa:webupd8team/java
   sudo apt-get update
-  sudo apt-get install oracle-java8-installer
+  sudo apt-get install oracle-java8-installer -y
 
   STATUS=$?
 
@@ -101,7 +101,7 @@ instalarSublimeText3() {
 
   sudo add-apt-repository ppa:webupd8team/sublime-text-3
   sudo apt-get update
-  sudo apt-get install sublime-text-installer
+  sudo apt-get install sublime-text-installer -y
 
   STATUS=$?
 
@@ -115,7 +115,7 @@ instalarNodejs() {
   echo "Instalando $APP"
 
   curl -sL https://deb.nodesource.com/setup | sudo bash -
-  sudo apt-get install nodejs
+  sudo apt-get install nodejs -y
 
   STATUS=$?
 
@@ -128,7 +128,7 @@ instalarGraphviz() {
   APP="Graphviz"
   echo "Instalando $APP"
 
-  sudo apt-get install graphviz
+  sudo apt-get install graphviz -y
 
   STATUS=$?
 
@@ -159,11 +159,10 @@ instalarMaven() {
   APP="Maven"
   echo "Instalando $APP"
 
-  sudo add-apt-repository ppa:natecarlson/maven3
-  sudo apt-get update
-  sudo apt-get install maven3
-  sudo ln -s /usr/bin/mvn3 /usr/bin/mvn
-
+  wget http://ppa.launchpad.net/natecarlson/maven3/ubuntu/pool/main/m/maven3/maven3_3.2.1-0~ppa1_all.deb
+  sudo dpkg -i maven3_3.2.1-0~ppa1_all.deb
+  sudo ln -s /usr/share/maven3/bin/mvn /usr/bin/maven
+  rm maven3_3.2.1-0~ppa1_all.deb
   STATUS=$?
 
   exibirMensagemDeStatus $STATUS $APP
@@ -175,7 +174,10 @@ instalarPostgreSQl() {
   APP="PostgreSQL"
   echo "Instalando $APP"
 
-  sudo apt-get install postgresql-9.1 pgadmin3
+  wget http://get.enterprisedb.com/postgresql/postgresql-9.1.15-2-linux-x64.run
+  sudo chmod 777 postgresql-9.1.15-2-linux-x64.run
+  sudo ./postgresql-9.1.15-2-linux-x64.run
+  rm postgresql-9.1.15-2-linux-x64.run
 
   STATUS=$?
 
