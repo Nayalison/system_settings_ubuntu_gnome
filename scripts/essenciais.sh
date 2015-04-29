@@ -5,7 +5,7 @@ instalarGit() {
   APP="Git"
   echo "Instalando $APP"
 
-  sudo apt-get install git git-gui gitk -y
+  sudo apt-get install git git-gui gitk meld -y
 
   STATUS=$?
 
